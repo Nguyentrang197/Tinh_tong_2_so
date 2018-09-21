@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:layout_span="2"
+                android:background="@color/green"
+                android:text="CÁC KIỂU LẬP TRÌNH SỰ KIỆN"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Số a: "
+                android:textSize="18sp" />
+            <EditText
+                android:id="@+id/editsoa"
+                android:layout_weight="1"
+                />
+        </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Số b: "
+            android:textSize="18sp" />
+        <EditText
+            android:id="@+id/editsob"
+            android:layout_weight="1"
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/kq"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:background="@color/green"
+            android:layout_span="2"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/btntong2so"
+            android:text="Tổng 2 số"
+            android:layout_span="2"
+            android:onClick="btn_tong2so"/>
+    </TableRow>
+</TableLayout>
