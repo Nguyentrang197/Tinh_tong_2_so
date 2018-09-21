@@ -14,10 +14,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnkq = (Button) findViewById(R.id.btntong2so);
-        btnkq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    }
+        
+            public void btn_tong2so(View v) {
                 EditText edita = (EditText) findViewById(R.id.editsoa);
                 int a = Integer.parseInt(edita.getText() + "");
                 EditText editb = (EditText) findViewById(R.id.editsob);
@@ -25,10 +24,5 @@ public class MainActivity extends Activity {
                 TextView kq = (TextView) findViewById(R.id.kq);
                 kq.setText((a + b) + "");
             }
-        });
-
-
-    }
-
     }
 
