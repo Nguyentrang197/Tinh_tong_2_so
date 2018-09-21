@@ -8,26 +8,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button btntong;
+    EditText edita, editb;
+    TextView mkq;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnkq = (Button) findViewById(R.id.btntong2so);
-        btnkq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText edita = (EditText) findViewById(R.id.editsoa);
-                int a = Integer.parseInt(edita.getText() + "");
-                EditText editb = (EditText) findViewById(R.id.editsob);
-                int b = Integer.parseInt(editb.getText() + "");
-                TextView kq = (TextView) findViewById(R.id.kq);
-                kq.setText((a + b) + "");
-            }
-        });
 
+    @Override
+        public void onClick(View v){
+        if (v==btntong) {
+            int kq = Integer.parseInt(edita.getText().toString()) + Integer.parseInt(editb.getText().toString());
+            mkq.setText(kq);
+        }
+        }
+        btntong = (Button) findViewById(R.id.btntong2so);
 
-    }
-    }
-
+}}
