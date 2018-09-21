@@ -17,10 +17,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        @Override
+    @Override
         public void onClick(View v){
+        if (v==btntong) {
             int kq = Integer.parseInt(edita.getText().toString()) + Integer.parseInt(editb.getText().toString());
             mkq.setText(kq);
         }
-    }
-}
+        }
+        btntong = (Button) findViewById(R.id.btntong2so);
+
+}}
